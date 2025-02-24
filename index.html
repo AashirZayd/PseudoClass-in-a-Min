@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS nth-child Pseudo-Class Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            margin-bottom: 30px;
+            padding: 10px;
+            border: 2px dashed gray;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 8px;
+            margin: 5px 0;
+            background-color: lightgray;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-weight: bold;
+            font-family: monospace;
+        }
+
+        code {
+            font-weight: bold;
+            font-family: monospace;
+        }
+
+        /* Example styles */
+        .nth-child-3 li:nth-child(3) { background-color: red; color: white; }
+        .nth-child-even-odd li:nth-child(even) { background-color: lightblue; }
+        .nth-child-even-odd li:nth-child(odd) { background-color: lightgreen; }
+        .nth-child-every-3 li:nth-child(3n) { background-color: orange; }
+        .nth-child-every-3-start2 li:nth-child(3n + 2) { background-color: yellow; }
+        .first-last-child li:first-child { background-color: blue; color: white; }
+        .first-last-child li:last-child { background-color: purple; color: white; }
+        .nth-last-child-3 li:nth-last-child(3) { background-color: pink; }
+        .nth-child-type p:nth-child(2) { color: red; font-weight: bold; }
+        .nth-child-type p:nth-of-type(2) { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>CSS nth-child Pseudo-Class Demonstration</h1>
+    <p>
+        The <code>:nth-child()</code> pseudo-class allows you to select elements based on their position inside a parent element. 
+        Below are examples with visual demonstrations and corresponding code snippets.
+    </p>
+
+    <!-- Example 1 -->
+    <div class="container nth-child-3">
+        <h2>1. Selecting the Third Child</h2>
+        <ul><li>Item 1</li><li>Item 2</li><li>Item 3 (Selected)</li><li>Item 4</li></ul>
+        <pre><code>li:nth-child(3) {
+    background-color: red;
+    color: white;
+}</code></pre>
+    </div>
+
+    <!-- Example 2 -->
+    <div class="container nth-child-even-odd">
+        <h2>2. Selecting Even & Odd Children</h2>
+        <ul><li>Item 1 (Odd)</li><li>Item 2 (Even)</li><li>Item 3 (Odd)</li><li>Item 4 (Even)</li></ul>
+        <pre><code>li:nth-child(odd) {
+    background-color: lightgreen;
+}
+
+li:nth-child(even) {
+    background-color: lightblue;
+}</code></pre>
+    </div>
+
+    <!-- Example 3 -->
+    <div class="container nth-child-every-3">
+        <h2>3. Selecting Every 3rd Child</h2>
+        <ul><li>Item 1</li><li>Item 2</li><li>Item 3 (Selected)</li><li>Item 4</li></ul>
+        <pre><code>li:nth-child(3n) {
+    background-color: orange;
+}</code></pre>
+    </div>
+
+    <!-- Example 4 -->
+    <div class="container first-last-child">
+        <h2>4. Selecting First & Last Child</h2>
+        <ul><li>First Item (Blue)</li><li>Middle Item</li><li>Last Item (Purple)</li></ul>
+        <pre><code>li:first-child {
+    background-color: blue;
+    color: white;
+}
+
+li:last-child {
+    background-color: purple;
+    color: white;
+}</code></pre>
+    </div>
+
+    <!-- Example 5 -->
+    <div class="container nth-last-child-3">
+        <h2>5. Selecting the Third Last Child</h2>
+        <ul><li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4 (Selected)</li></ul>
+        <pre><code>li:nth-last-child(3) {
+    background-color: pink;
+}</code></pre>
+    </div>
+
+    <!-- Example 6 -->
+    <div class="container nth-child-type">
+        <h2>6. Difference Between nth-child and nth-of-type</h2>
+        <div>
+            <p>Paragraph 1</p><span>Span 1</span><p>Paragraph 2 (nth-of-type(2) Selected)</p><p>Paragraph 3</p>
+        </div>
+        <pre><code>p:nth-child(2) {
+    color: red;
+    font-weight: bold;
+}
+
+p:nth-of-type(2) {
+    color: green;
+    font-weight: bold;
+}</code></pre>
+    </div>
+
+    <footer style="margin-top: 20px; text-align: center; font-weight: bold;">
+        Demonstrated by Aashir Zayd
+        <br>
+        <a href="https://www.linkedin.com/in/aashir-zayd-b28136275/" target="_blank">
+            Connect on LinkedIn
+        </a>
+    </footer>
+
+</body>
+</html>
