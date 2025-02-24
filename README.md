@@ -119,4 +119,4 @@ If you found this helpful, feel free to **connect with me on LinkedIn**:
 ✅ **Links to MDN and CSS-Tricks for further learning**  
 ✅ **Your LinkedIn profile for networking**  
 
-This README will make your project **look professional** and **helpful for beginners**. Let me know if you need any modifications! 🚀
+
