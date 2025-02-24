@@ -110,7 +110,7 @@ If you found this helpful, feel free to **connect with me on LinkedIn**:
 ```
 
 ---
-
+```
 ### **What’s Included in this README?**
 ✅ **Explanation of `nth-child()`**  
 ✅ **Features of the project**  
